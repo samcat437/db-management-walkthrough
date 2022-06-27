@@ -9,7 +9,7 @@ class Category(db.Model):
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
-        return self
+        return self.category_name
 
 
 class Task(db.Model):
@@ -23,5 +23,6 @@ class Task(db.Model):
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
-        return "#{0} -
-        Task: {1} | Urgent: {2}".format(self.id, self.task_name, self.is_urgent)
+        return "#{0} - Task: {1} | Urgent: {2}".format(
+            self.id, self.task_name, self.is_urgent
+        )
