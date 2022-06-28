@@ -22,3 +22,6 @@ def add_category():
         return redirect(url_for("categories"))
     return render_template("add_category.html")
 
+@app.route("/edit_category", methods=["GET", "POST"])
+def edit_category():
+    return render_template("edit_category.html")
