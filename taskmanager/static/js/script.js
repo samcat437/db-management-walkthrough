@@ -8,9 +8,14 @@ document.addEventListener('DOMContentLoaded', function() {
       format: "dd mmmm, yyyy",
       i18n: {done: "Select"}
     });
+
+    let selects = document.querySelectorAll('select');
+    M.FormSelect.init(selects);
+
+    let collapsibles = document.querySelectorAll('.collapsible');
+    M.Collapsible.init(collapsibles);
   });
 
-  selects = document.querySelectorAll('select');
-  M.FormSelect.init(selects);
+
 
  
